@@ -16,7 +16,7 @@ attr_accessor :name, :appointment, :date
   
   #that takes in a date and an instance of the Doctor class in this order and creates a new Appointment. The Appointment should know that it belongs to the patient.
   def new_appointment(date, doctor)
-    appointment = Appointment.new(date, doctor, self)
+    appointment = Appointment.new(date, self, doctor)
     self.appointments.last 
   end 
 
